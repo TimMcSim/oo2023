@@ -4,7 +4,7 @@ let word:string=klaviatuur.question("Sisesta oma sõna:");
 
 function charinword(inputWord: string) {
 	let inputWordLenght:number = inputWord.length;
-	let answer:string = "Sinu sõna pikus on: "+ inputWordLenght+" tähte"
+	let answer:string = "Sinu sõna pikkus on: "+ inputWordLenght+" tähte"
 	return answer
 }
 
