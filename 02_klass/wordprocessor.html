@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head>
+    <title>Sõnastik</title>
+    <script src="wordprocessor.js"></script>
+    <script>
+        let processor=[];
+        function startPage(){
+           processor[0]=new EtToEng(); 
+           processor[1]=new EngToEt(); 
+		}
+		function activateProcessor(){
+		   type1.innerText=processor[processorSelect.selectedIndex].inputLang();
+		   type2.innerText=processor[processorSelect.selectedIndex].outputLang();
+		   answer.innerText="";
+		   input1.value="";
+        }
+		function buttonClick(){
+		   answer.innerText=processor[processorSelect.selectedIndex].
+		                          translate(input1.value);
+		}
+    </script>
+	<meta charset="utf-8">
+  <script type="text/javascript" data-name="TokenSigning" data-by="Web-eID extension" src="chrome-extension://ncibgoaomkmdpilpocfeponihegamlic/token-signing-page-script.js"></script></head>
+  <body onload="startPage()">
+  
+      <input type="string" id="input1" onchange="buttonClick()"> <span id="type1">ET</span>
+        <input type="button" value="=" onclick="buttonClick()">&nbsp;
+	  <span id="answer"></span> <span id="type2">ENG</span><br>
+	  <select id="processorSelect" onchange="activateProcessor()">
+	     <option>eesti-inglise</option>
+	     <option>inglise-eesti</option>
+	  </select>
+</body></html>
