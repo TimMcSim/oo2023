@@ -1,13 +1,13 @@
 var Vowel = /** @class */ (function () {
     function Vowel() {
         this.letterList = ["a", "e", "i", "o", "u", "w", "y"];
-        this.oneByOne = [];
     }
     Vowel.prototype.toUpper = function (word) {
+        var oneByOne = [];
         for (var i = 0; i < word.length; i++) {
-            this.oneByOne.push(this.letterList.includes(word[i]) ? word[i].toUpperCase() : word[i].toLowerCase());
+            oneByOne.push(this.letterList.includes(word[i]) ? word[i].toUpperCase() : word[i].toLowerCase());
         }
-        return this.oneByOne.join("");
+        return oneByOne.join("");
     };
     return Vowel;
 }());
@@ -17,10 +17,11 @@ var Consonant = /** @class */ (function () {
         this.oneByOne = [];
     }
     Consonant.prototype.toUpper = function (word) {
+        var oneByOne = [];
         for (var i = 0; i < word.length; i++) {
-            this.oneByOne.push(this.letterList.includes(word[i]) ? word[i].toUpperCase() : word[i].toLowerCase());
+            oneByOne.push(this.letterList.includes(word[i]) ? word[i].toUpperCase() : word[i].toLowerCase());
         }
-        return this.oneByOne.join("");
+        return oneByOne.join("");
     };
     return Consonant;
 }());

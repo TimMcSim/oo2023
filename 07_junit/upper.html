@@ -10,7 +10,6 @@
 				entities[1]=new Consonant();
 			}
 			function activateTransformer(){
-				type=entities[entitySelect.selectedIndex];
 				answer.innerText="";
 				input1.value="";
 			}
@@ -24,7 +23,7 @@
 	<body onload="startPage()">
 		<input type="text" id="input1" onchange="buttonClick()">
 			<input type="button" value="=" onclick="buttonClick()"/>&nbsp;
-		<span id="answer"></span>  <br/>
+		<span id="answer"></span> <br/>
 		<select id="entitySelect" onchange="activateTransformer()">
 			<option>Vowel</option>
 			<option>Consonant</option>
